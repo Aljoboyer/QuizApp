@@ -1,7 +1,9 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "http://localhost:5000",
+  // baseURL: "http://localhost:5000",
+  baseURL: "https://blooming-hamlet-12117.herokuapp.com",
+
 });
 
 API.interceptors.request.use((req) => {

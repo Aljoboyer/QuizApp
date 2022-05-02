@@ -14,9 +14,9 @@ const QuizPage = () => {
     const [quizShow, setQuizShow] = useState(true);
     const [due, setDue] = useState(10)
     const [timer, setTimer] = useState(10000)
-    console.log('this is ', state)
+
     useEffect(() => {
-        fetch(`http://localhost:5000/teacher/GetAllQuiz?subject=${state.subject}&&type=${state.type}`).then(res => res.json()).then(data => setQuizes(data))
+        fetch(`https://blooming-hamlet-12117.herokuapp.com/teacher/GetAllQuiz?subject=${state.subject}&&type=${state.type}`).then(res => res.json()).then(data => setQuizes(data))
     },[])
 
     const CheckBoxHandler = (data) => {
